@@ -1,3 +1,26 @@
-body {
-  background-color: blue;
+@import "globals";
+@import "utilities";
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400&display=swap");
+
+// Main Nav
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d1d1f;
+  height: 45px;
+  font-weight: 200;
+  font-size: 12px;
+  color: #f5f5f7;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 1024px;
+
+    a {
+      color: #f5f5f7;
+    }
+  }
 }
