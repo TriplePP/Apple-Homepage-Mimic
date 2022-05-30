@@ -1,5 +1,6 @@
 @import "globals";
 @import "utilities";
+@import "variables";
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400&display=swap");
 
 // Main Nav
@@ -7,20 +8,82 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1d1d1f;
+  background-color: $nav-background;
   height: 45px;
   font-weight: 200;
   font-size: 12px;
-  color: #f5f5f7;
 
-  ul {
+  .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 1024px;
+    min-width: 960px;
 
     a {
-      color: #f5f5f7;
+      color: $nav-font-colour;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+    }
+
+    // hamburger lines
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      transition: transform 0.3s ease;
+
+      div {
+        margin: 3px;
+        height: 1px;
+        width: 16px;
+        background: $nav-font-colour;
+        transition: all 0.2s ease;
+      }
+
+      &:hover div {
+        background: white;
+      }
     }
   }
 }
+
+// Unicef banner
+.unicef-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efeff0;
+  padding: 1rem;
+
+  a {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+    color: $link-blue;
+
+    &::after {
+      content: "↗";
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  img {
+    height: 35px;
+  }
+}
+
+@import "media";

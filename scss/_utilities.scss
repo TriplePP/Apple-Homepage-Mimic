@@ -1,0 +1,21 @@
+// Center items
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Iphone sections
+// Iphone 13 section
+.iphone-section {
+  padding-top: 2.5rem;
+  background-color: #fbfbfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: 3rem;
+  }
+}
