@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   background-color: $nav-background;
-  height: 45px;
+  height: 48px;
   font-weight: 200;
   font-size: 12px;
 
@@ -83,6 +83,46 @@
   }
   img {
     height: 35px;
+  }
+}
+
+// Home page collection
+
+.homepage-collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  #ipad-air {
+    height: 490px;
+    background: center / cover no-repeat url(/img/ipad-air.jpg);
+    justify-content: flex-start;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    span,
+    h2,
+    h3 {
+      color: #f4f4fd;
+      padding-bottom: 1rem;
+    }
+
+    .iphone-links {
+      color: $link-blue;
+
+      i {
+        padding-right: 1rem;
+      }
+
+      p:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
