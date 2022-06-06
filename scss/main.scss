@@ -5,6 +5,8 @@
 
 // Main Nav
 .main-nav {
+  width: 100%;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +14,7 @@
   height: 48px;
   font-weight: 200;
   font-size: 12px;
+  z-index: 10;
 
   .nav-content {
     display: flex;
@@ -65,7 +68,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #efeff0;
+  background-color: $main-background;
   padding: 1rem;
 
   a {
@@ -88,14 +91,74 @@
 
 // Home page collection
 
+#ipad-air {
+  background: center / cover no-repeat url(/img/ipad-air.jpg);
+
+  h2,
+  h3 {
+    color: $nav-font-colour;
+  }
+}
+
+#apple-watch {
+  background: center / cover no-repeat url(/img/apple-watch.jpg);
+}
+
+#iphone-13 {
+  background: center / cover no-repeat url(/img/iphone-13-alt.jpg);
+}
+
+#studio-display {
+  background: center / cover no-repeat url(/img/studio-display.jpg);
+}
+
+#apple-fitness {
+  background: center / contain no-repeat $main-background url(/img/fitness.jpg);
+}
+
+#now-and-then {
+  background: center / cover no-repeat url(/img/now-and-then.jpg);
+  justify-content: space-between;
+
+  & * {
+    color: $nav-font-colour;
+  }
+
+  .text-wrap {
+    width: 300px;
+    padding-bottom: 1.5rem;
+    h4 {
+      font-size: 4rem;
+
+      em {
+        font-weight: 400;
+      }
+
+      span {
+        font-size: 2.5rem;
+      }
+    }
+    p:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .homepage-collection {
+  width: calc(100% - 24px);
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
-  #ipad-air {
-    height: 490px;
-    background: center / cover no-repeat url(/img/ipad-air.jpg);
+  gap: 12px;
+  // Homepage collection item styles
+  .homepage-item {
+    height: 570px;
     justify-content: flex-start;
+
+    // Adjust position of icon
+    i {
+      transform: translateY(-2px);
+    }
 
     h2 {
       font-size: 2rem;
@@ -108,7 +171,7 @@
     span,
     h2,
     h3 {
-      color: #f4f4fd;
+      color: $nav-background;
       padding-bottom: 1rem;
     }
 
@@ -117,10 +180,75 @@
 
       i {
         padding-right: 1rem;
+        transform: translateY(2px);
       }
 
       p:hover {
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Footnotes
+
+.footnotes {
+  background-color: $main-background;
+  margin-top: 12px;
+  color: $footer-text-colour;
+
+  .footnote-content {
+    max-width: 980px;
+    margin: auto;
+    font-size: 0.7rem;
+
+    li {
+      padding-top: 1rem;
+    }
+
+    ol li {
+      margin-left: 1rem;
+    }
+
+    ul {
+      padding-bottom: 1rem;
+    }
+    // Footer nav links
+    nav {
+      border-top: 1px solid $nav-font-colour;
+
+      li {
+        border-bottom: 1px solid $nav-font-colour;
+        padding-bottom: 0.5rem;
+
+        a {
+          color: inherit;
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+    // Further footer links and content
+    .footer-content {
+      .footer-coloured-links {
+        a {
+          color: $link-blue;
+        }
+      }
+      div {
+        padding-top: 1rem;
+      }
+
+      .footer-links a {
+        padding: 0 0.5rem;
+        color: $footer-text-colour;
+        border-right: 1px solid $nav-font-colour;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
       }
     }
   }

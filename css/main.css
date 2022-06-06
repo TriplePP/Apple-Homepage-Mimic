@@ -21,6 +21,10 @@ li {
   list-style: none;
 }
 
+ol li {
+  list-style: decimal;
+}
+
 .center-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,6 +86,8 @@ li {
 }
 
 .main-nav {
+  width: 100%;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,6 +101,7 @@ li {
   height: 48px;
   font-weight: 200;
   font-size: 12px;
+  z-index: 10;
 }
 
 .main-nav .nav-content {
@@ -198,46 +205,171 @@ li {
   height: 35px;
 }
 
+#ipad-air {
+  background: center/cover no-repeat url(/img/ipad-air.jpg);
+}
+
+#ipad-air h2,
+#ipad-air h3 {
+  color: #d6d6d6;
+}
+
+#apple-watch {
+  background: center/cover no-repeat url(/img/apple-watch.jpg);
+}
+
+#iphone-13 {
+  background: center/cover no-repeat url(/img/iphone-13-alt.jpg);
+}
+
+#studio-display {
+  background: center/cover no-repeat url(/img/studio-display.jpg);
+}
+
+#apple-fitness {
+  background: center/contain no-repeat #efeff0 url(/img/fitness.jpg);
+}
+
+#now-and-then {
+  background: center/cover no-repeat url(/img/now-and-then.jpg);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#now-and-then * {
+  color: #d6d6d6;
+}
+
+#now-and-then .text-wrap {
+  width: 300px;
+  padding-bottom: 1.5rem;
+}
+
+#now-and-then .text-wrap h4 {
+  font-size: 4rem;
+}
+
+#now-and-then .text-wrap h4 em {
+  font-weight: 400;
+}
+
+#now-and-then .text-wrap h4 span {
+  font-size: 2.5rem;
+}
+
+#now-and-then .text-wrap p:hover {
+  text-decoration: underline;
+}
+
 .homepage-collection {
+  width: calc(100% - 24px);
+  margin: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
-.homepage-collection #ipad-air {
-  height: 490px;
-  background: center/cover no-repeat url(/img/ipad-air.jpg);
+.homepage-collection .homepage-item {
+  height: 570px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
-.homepage-collection #ipad-air h2 {
+.homepage-collection .homepage-item i {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.homepage-collection .homepage-item h2 {
   font-size: 2rem;
 }
 
-.homepage-collection #ipad-air h3 {
+.homepage-collection .homepage-item h3 {
   font-size: 1rem;
 }
 
-.homepage-collection #ipad-air span,
-.homepage-collection #ipad-air h2,
-.homepage-collection #ipad-air h3 {
-  color: #f4f4fd;
+.homepage-collection .homepage-item span,
+.homepage-collection .homepage-item h2,
+.homepage-collection .homepage-item h3 {
+  color: #101010;
   padding-bottom: 1rem;
 }
 
-.homepage-collection #ipad-air .iphone-links {
+.homepage-collection .homepage-item .iphone-links {
   color: #0066cc;
 }
 
-.homepage-collection #ipad-air .iphone-links i {
+.homepage-collection .homepage-item .iphone-links i {
   padding-right: 1rem;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
-.homepage-collection #ipad-air .iphone-links p:hover {
+.homepage-collection .homepage-item .iphone-links p:hover {
   text-decoration: underline;
+}
+
+.footnotes {
+  background-color: #efeff0;
+  margin-top: 12px;
+  color: #6e6e73;
+}
+
+.footnotes .footnote-content {
+  max-width: 980px;
+  margin: auto;
+  font-size: 0.7rem;
+}
+
+.footnotes .footnote-content li {
+  padding-top: 1rem;
+}
+
+.footnotes .footnote-content ol li {
+  margin-left: 1rem;
+}
+
+.footnotes .footnote-content ul {
+  padding-bottom: 1rem;
+}
+
+.footnotes .footnote-content nav {
+  border-top: 1px solid #d6d6d6;
+}
+
+.footnotes .footnote-content nav li {
+  border-bottom: 1px solid #d6d6d6;
+  padding-bottom: 0.5rem;
+}
+
+.footnotes .footnote-content nav li a {
+  color: inherit;
+}
+
+.footnotes .footnote-content nav li a:hover {
+  color: #000;
+}
+
+.footnotes .footnote-content .footer-content .footer-coloured-links a {
+  color: #0066cc;
+}
+
+.footnotes .footnote-content .footer-content div {
+  padding-top: 1rem;
+}
+
+.footnotes .footnote-content .footer-content .footer-links a {
+  padding: 0 0.5rem;
+  color: #6e6e73;
+  border-right: 1px solid #d6d6d6;
+}
+
+.footnotes .footnote-content .footer-content .footer-links a:first-of-type {
+  padding-left: 0;
 }
 
 @media (max-width: 1024px) {
@@ -246,6 +378,9 @@ li {
   }
   .iphone-section img {
     min-width: 80%;
+  }
+  .homepage-collection .homepage-item {
+    height: 480px;
   }
 }
 
@@ -295,6 +430,10 @@ li {
   }
   .promo-section img {
     width: 100%;
+  }
+  .homepage-collection {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
